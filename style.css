@@ -77,7 +77,7 @@ nav {
 #nav-btn h4:hover::after {
     border-radius: 0;
     bottom: 0;
-    color: #efeae3;
+    /* color: #efeae3; */
 }
 
 #nav-btn h4 a {
@@ -374,17 +374,6 @@ video {
     padding-left: -6vw;
 }
 
-/* .element-right #long {
-    over
-}
-
-.element-right h3 {
-    font-size: 1.5vw;
-    font-family: neu2;
-    font-weight: 600;
-    padding-left: 0.3vw;
-} */
-
 .element-right h4 {
     font-size: 1.2vw;
     font-family: neu2;
@@ -426,4 +415,133 @@ video {
 #elem-box h3 {
     font-size: 1vw;
     font-family: neu2;
+}
+
+#page4{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    padding: 1vw 2vw;
+}
+
+.upper-text {
+position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: start;
+  height: 100px;
+  width: 25%;
+}
+
+.upper-text h1 {
+  position: relative;
+  font-size: 1.1vw;
+  font-weight: 800;
+  font-family: neu2;
+  border: 1px solid rgba(117, 113, 113, 0.819);
+  border-radius: 50px;
+  align-content: center;
+  padding: 8px 40px;
+  transition: all ease 0.4s;
+  overflow: hidden;
+}
+
+.upper-text img {
+    height: 15px;
+    width: 20px;  
+}
+
+.upper-text h1::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+.upper-text h1:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+.upper-text h1 a {
+    text-decoration: none;
+    color: #000000bb;
+    z-index: 9;
+    position: relative;
+}
+
+.upper-text h1:hover a {
+    color: #efeae3;
+}
+
+#design-con {
+    
+    min-height: 100vh;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+}
+
+#grp-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+    width: 100%;
+    margin: 15vw 2vw;
+    background-color: black;
+    border-radius: 20px;
+    position: relative;
+}
+
+#design-left {
+    height: 100%;
+    width: 40%;
+    align-items: center;
+    padding-top: 10vw;
+    
+}
+
+#design-left h1 {
+    color: #fff;
+    font-size: 4vw;
+    font-family: font1;
+    padding-left: 5vw;
+    align-items: center;
+}
+
+#design-left p {
+    margin-top: 3vw;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1vw;
+    font-family: neu;
+    height: 500rem;
+    width: 400px;
+    padding-left: 5vw;
+    line-height: 1.5vw;
+}
+
+#design-right {
+    height: 100%;
+    width: 60%;
+    position: relative;
+    
+}
+
+#design-right img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    object-fit:fill;
+    object-position: center;
+    border-radius: 20px;
+    
 }
