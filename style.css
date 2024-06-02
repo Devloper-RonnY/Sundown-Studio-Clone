@@ -26,7 +26,7 @@
 html, body {
     height: 100%;
     width: 100%;
-
+    overflow-x: hidden;
 }
 
 #main {
@@ -48,6 +48,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    position: relative;
+    z-index: 100;
 }
 
 #nav-btn {
@@ -96,6 +98,10 @@ nav {
 
 #nav-btn h4:hover a {
     color: #efeae3;
+}
+
+nav h3 {
+    display: none;
 }
 
 .hero-sec {
@@ -728,7 +734,7 @@ position: absolute;
 }
 
 #foot-grp #mail {
-    background-color: #000;
+    background-color: #fe320a;
     border: none;
     margin-left: 2vw;
     padding-right: 10vw;
@@ -737,6 +743,7 @@ position: absolute;
     border-bottom: 1px solid #ffffff3f;
     text-align: left;   
     font-size: 1.3vw;
+    /* filter: blur(1px); */
 }
 
 #foot-right h4 {
@@ -769,3 +776,261 @@ position: absolute;
         transform: translate(-10%, 10%)skew(-12deg);
     }
 }
+
+#full-scr {
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000070;
+    position: fixed;
+    z-index: 99;
+    top: -100%;
+    transition: all ease 0.5s;
+
+}
+
+ #full-div1 {
+    display: flex; 
+    flex-direction: column;
+    position: relative;
+    z-index: 100;
+    height: 50%;
+    width: 100%;
+    background-color:#efeae3;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+} 
+
+#full-div1 h2 {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    top: 20vh;
+    right: 0;
+    font-size: 14vw;
+    font-family: font1;
+    padding-right: 5vw;
+ }
+
+         /*    Responsiveness    */   
+
+@media (max-width:600px) {
+    #page1 {
+        min-height: 100vh;
+        width: 100vw;
+        /* background-color: aqua; */
+    }
+    nav img {
+        height: 9vh;
+        transition: all ease 0.4s;
+
+    }
+    nav {
+        width: 100%;
+        padding: 5vw 5vw;
+        background-color: #efeae3;
+        
+    }
+    #nav-btn {
+        display: none; 
+
+    }
+    nav h3{
+        display: block;
+        padding: 3vw 5vw;
+        border: 1px solid #aea9a9;
+        border-radius: 50px;
+        font-family: neu2;
+        font-size: 4vw;
+        word-spacing: 0.4vw;
+        padding-left: 13vw;
+    }
+    .hero-sec {
+            height: 62vh;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            flex-direction: column-reverse;
+            padding-bottom: 10vw;
+            border-bottom: 1px solid #0000003c;
+            padding: 15vw 5vw;
+            position: relative;
+            z-index: 9;
+        }
+        .hero-sec h1 {
+            font-size: 16vw;
+            line-height: 12vw;
+            text-align: right;
+        }
+        .left h3{
+            width: 80%;
+            font-size: 5vw;
+            line-height: 5vw;
+        }
+        
+        .right {
+            font-family: font1;
+        }
+        #hero-shape{
+            position: absolute;
+            height: 70vw;
+            width: 80vw;
+            right: 0;
+            top: 68vh;
+        }
+        video {
+            position: relative;
+            height: 60vh;
+            width: 92%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px;
+            margin-left: 5vw;
+            margin-top: 5vw;
+        }
+        #page2 {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            background-color: #efeae3;
+            padding: 8vw 0;
+        }
+        .gola {
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: #fe320a;
+            margin: 1vw 2vw;
+        }
+        #page2-bottom {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            flex-direction: column;
+            padding: 4.5vw;
+            margin: 5vw 0;
+        }
+        
+        #page2-bottom h1 {
+            display: flex;
+            align-items: flex-start; 
+            position: relative;
+            padding-top: 5vw;
+            width: 100vw;
+            font-size: 8vw;
+            font-family: font1;
+            padding-left: 5vw;
+        }
+        #page2-right{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            padding-left: 5vw;
+        }
+        
+        #page2-right img {
+            border-radius: 10px;
+            object-fit: cover;
+            display: flex;
+            height: 50vw;
+            width: 75vw;
+           
+        }
+        
+        #page2-right h3 {
+            height: 20vh;
+            width: 70vw;
+            font-size: 4vw;
+            font-family: neu2;
+            margin-top: 5vw;
+            line-height: 6vw;  
+        }
+        #page3 {
+            min-height: 100vh;
+            width: 100%;
+            background-color: #efeae3;
+        }
+        
+        #elem-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            padding: 4vw;
+        }
+        #elem-box h3 {
+            font-size: 3.5vw;
+            font-family: neu2;
+            padding-left: 3vw;
+        }
+        
+        
+        .element {
+            position: relative;
+            height: 40vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4vw 3vw;
+            border-bottom: 1px solid black;
+            /* overflow: hidden; */
+        }
+        #elem-container .element{
+            display: none;
+        }
+        .element h1 {
+            font-size: 4vw;
+            font-family: font1;
+            position: relative;
+            z-index: 9;
+            top: -100%;
+            transition: all ease 0.3s;
+        }
+        .element h4 {
+            position: relative;
+            align-content: center;
+            font-size: 1.5vw;
+            font-family: neu2;
+            font-weight: 700; 
+        } 
+        
+        .element-right {
+            position: relative;
+            height: 100px;
+            width: 100px;
+            padding-top: 2vw;
+            white-space: nowrap;
+            z-index: 9;
+            padding-left: -6vw;
+        }
+        
+        .element-right h4 {
+            font-size: 1.2vw;
+            font-family: neu2;
+            font-weight: 400; 
+        }
+        
+        #fixed-image {
+            height: 50vw;
+            width: 50vw;
+            border-radius: 10px;
+            background-color: red;
+            left: 53%;
+            top: 20%;
+            position: fixed;
+            z-index: 99;
+            display: none;
+           background-position: center;
+           background-size: cover;
+           display: none;
+        }
+        
+    
+    }
