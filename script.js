@@ -31,10 +31,8 @@ function swipperAnimation (){
         spaceBetween: 100,
       });
 }
-swipperAnimation();
-page4Animation();
-
-var navimg = document.querySelector(`nav img`)
+function menuAnimation(){
+    var navimg = document.querySelector(`nav img`)
 var full = document.querySelector(`#full-scr`)
 var menu = document.querySelector(`nav h3`);
 var flag = 0
@@ -50,3 +48,15 @@ menu.addEventListener(`click`, function(){
     }
     
 })
+}
+function loaderAnimation(){
+    var loader = document.querySelector(`#loader`)
+setTimeout( function(){
+    loader.style.top = "-100%"
+},4200)
+}
+swipperAnimation();
+page4Animation();
+menuAnimation();
+loaderAnimation();
+
